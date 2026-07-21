@@ -37,4 +37,10 @@
 }
 
 
+.productList {
+color:rgb(0, 42, 28);
+background-color: rgba(0, 0, 0, 0.347);
+align-items: center;
 
+justify-content:center;
+}

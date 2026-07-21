@@ -1,28 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Container from './container.js';
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-// export default App;
+import ProductList from './productList.js';
+
+
 
 
  
@@ -117,15 +98,29 @@ class Navbar extends React.Component {
 }
  
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Navbar />
-        <Container />
-      </div>
-    );
-  }
+// class App extends React.Component {}
+//   render() {}
+
+function App() {
+  const products = [
+    {
+      name: 'Iphone XSMAX',
+      price: 100000,
+      description: 'This is the best phone in the world',
+    },
+    {
+      name: 'Iphone 12ProMAX',
+      price: 100000,
+      description: 'This is the best phone in the world',
+    },
+  ];
+
+  return (
+    <div>
+      <Navbar />
+      <ProductList products={products} />
+    </div>
+  );
 }
 
 export default App;
